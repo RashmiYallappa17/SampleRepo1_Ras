@@ -13,10 +13,24 @@ public class LoginPage
 	}
 	
 	By username = By.xpath("//input[@id='email1']");
+	
 	By password = By.xpath("(//input[@id='password1'])[1]");
+	
 	By loginButton = By.xpath("//button[normalize-space()='Sign in']");
 	
 	By signIn=By.xpath("//h2[normalize-space()='Sign In']");
+	
+	By footerIcon=By.xpath("//div[@class='footer')]//a");
+	
+	public int CountFooterLinks() 
+	{
+		
+	System.out.println("Footer count ");
+	
+	int count=	driver.findElements(footerIcon).size();
+	
+	return count;
+	}
 	
 	public boolean IsSignupPresent()
 	{

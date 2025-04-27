@@ -22,6 +22,8 @@ public class LoginPage
 	
 	By footerIcon=By.xpath("//div[@class='footer')]//a");
 	
+	By signUpLink= By.linkText("New user? Signup");
+	
 	public int CountFooterLinks() 
 	{
 		
@@ -38,6 +40,13 @@ public class LoginPage
 		
 		return status;
 	}
+	
+	public void ClickOnSignUpLink()
+	{
+		driver.findElement(signIn).click();
+		
+	}
+	
 	
 	public DashboardPage LoginToApplication(String user,String pass) 
 	{
